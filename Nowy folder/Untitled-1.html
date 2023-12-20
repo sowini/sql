@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Klient(nazwisko,imie,zawod)
+        {
+        this.nazwisko = nazwisko;
+        this.imie = imie;
+        this.zawod = zawod;
+            this.wypisz = function()
+            {
+                alert(this.nazwisko + ' ' +this.imie)
+            }
+        }
+        var osoba_1 = new Klient('Nowak','Jan','Kierowca');
+        var osoba_2 = new Klient('Mus','Adam','Magazynier');
+
+        alert("teraz tworzenei obiektu 1 dla klasy Klient");
+        osoba_1.wypisz();
+
+        osoba_2.imie = 'Piotr';
+
+        alert("teraz tworzenei obiektu 2 dla klasy Klient");
+        osoba_2.wypisz();
+    </script>
+    
+</body>
+</html>
