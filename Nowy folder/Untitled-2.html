@@ -1,0 +1,59 @@
+<html lang="pl-PL"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function Kolo(r)
+        {
+            this.promienK=r;
+            this.poleK = function()
+            {
+                return (Math.PI * this.promienK * this.promienK);
+            }
+            this.obwodK = function()
+            {
+                return(2 * Math.PI * this.promienK);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>tworzenie obiektu koło 1 i koło 2 za pomocą konstruktora </br>
+    oraz obliczanie ich obwodów i pola</br>
+</h1>
+<form>
+    Dane pierwszego koła;</br>
+    Promień: <input id="input1" type="text" value=""/></br>
+
+    Dane drugiego koła:</br>
+    Promień: <input id="input2" type="text" value=""/></br>
+
+    <button onclick="return przetwarzanie()">OBLICZ POLA I OBWODY</button>
+</br>
+
+</form>
+
+<div id="div1"></div>
+<div id="div2"></div>
+<script>
+
+    function przetwarzanie()
+    {
+        var input1 = document.getElementById("input1");
+        var input2 = document.getElementById("input2");
+        var div1 = document.getElementById("div1");
+        var div2 = document.getElementById("div2");
+        var r1 = Number(input1.value);
+        var r2 = Number(input2.value);
+
+    var kolo1 = new Kolo(r1);
+    div1.innerHTML = "Koło1:pole="+kolo1.poleK().toFixed(2) + ", obwód=" + kolo1.obwodK().toFixed(2);
+
+    var kolo2 = new Kolo(r2);
+    div2.innerHTML = "Koło2:pole="+kolo2.poleK().toFixed(2) + ", obwód=" + kolo2.obwodK().toFixed(2);
+    return false
+            }
+            </script>
+</body>
+</html>
