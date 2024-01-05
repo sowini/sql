@@ -1,0 +1,25 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        function Student(imie,nazwisko,wiek,rok){
+            this.imie=imie;
+            this.nazwisko=nazwisko;
+            this.wiek=wiek;
+            this.rok=rok;
+            this.wypisz=function(){
+                 alert(this.imie+" "+this.nazwisko+" "+this.wiek+" "+this.rok);
+            };
+        };
+
+       const student1 = new Student("kacper","Sowa","18","42");
+       student1.wypisz();
+    </script>
+</body>
+</html>

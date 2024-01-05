@@ -1,0 +1,36 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    
+    <script>
+      var data_czas= new Date();
+      document.write("Data i czas;<br>"+data_czas+"<br></br>");
+      document.write("Dzień mieisąca;<br>"+data_czas.getDate()+"<br></br>");
+      document.write("Miesiąc;<br>"+data_czas.getMonth()+"<br></br>");
+      document.write("Rok;<br>"+data_czas.getFullYear()+"<br></br>");
+      document.write("Dzień tygodnia;<br>"+data_czas.getDay()+"<br></br>");
+    </script>
+    <script>
+        var m ="";
+        var data = new Date();
+        switch(data.getDay())
+        {
+            case 0:
+                dzien ="niedziela";break;
+            case 1:dzien ="poniedzialek";break;
+            case 2:dzien ="wtorek";break;
+            case 3:dzien ="sroda";break;
+            case 4:dzien ="czwartek";break;
+            case 5:dzien ="piatek";break;
+            case 6:dzien ="sobota";break;
+        }
+        document.write("To jest"+dzien+".");
+        </script>
+</body>
+</html>
