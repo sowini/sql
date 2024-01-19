@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function down(){
+            document.getElementById('text').innerHTML="nie mam pieniedzy"
+        }
+        function up(){
+            document.getElementById('text').innerHTML="nie mam czasu"
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <p id="text">nie mam czasu</p>
+        <input type="button" name="przycisk" id="" value="zamien" onmousedown="down()" onmouseup="up()">
+    </center>
+</body>
+</html>
