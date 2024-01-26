@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="obwód-pole">
+        Podaj bok a: <input type="text" name="a"><br><br>
+        Podaj bok a: <input type="text" name="b"><br><br>
+
+        <input type="button" value="Oblicz" onclick="licz(form)"><br><br>
+        Wynik:<br><br>
+
+        Pole prostokąta: <input type="text" name="p"><br><br>
+        Obwód prostokąta: <input type="text" name="o">
+    </form>
+        <script type="text/javascript">
+            function licz(f)    {
+                if(f.a.value==""| f.b.value=="")
+                alert("Wprowadż dane");
+            else{
+
+                a=f.a.value;
+                b=f.b.value;
+                
+                f.p.value=a*b
+                f.o.value=2*a+2*b;
+            }
+            }
+        </script>
+</body>
+</html>

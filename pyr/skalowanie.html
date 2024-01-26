@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function klik() {
+            document.getElementById("nig").style.width = "800px";
+            document.getElementById("nig").style.height = "800px";
+        }
+        
+        function najechanie() {
+            document.getElementById("nig").style.width = "400px";
+            document.getElementById("nig").style.height = "400px";
+        }
+        
+        function zwykly() {
+            document.getElementById("nig").style.width = "200px";
+            document.getElementById("nig").style.height = "200px";
+        }
+
+        function zmien(cos) {
+            document.getElementById("nig").src = cos;
+        }
+
+        function kolor(col) {
+            document.body.style.backgroundColor = col;
+        }
+    </script> 
+    <a onmouseover="kolor('green');">Zielony</a><br><br>    
+    <a onmouseover="kolor('red');">Czerwony</a><br><br>
+    <a onmouseover="kolor('blue');">Niebieski</a><br><br>    
+    
+    <img width="200px" height="200px" id="nig"  
+    onmouseup="zmien('ikona2.jpg'); najechanie();" 
+    onmousedown="zmien('ikona3.jpg'); klik();" 
+    onmouseover="zmien('ikona2.jpg'); najechanie();" 
+    onmouseleave="zmien('ikona1.jpg'); zwykly();" 
+    src="ikona1.jpg"> 
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function logowanie(form){
+if(form.login.value=="kowalski"&form.pass.value=="123")
+window.location.replace("skalowanie.html");
+else
+aler("podaj dane logowani");
+        }
+    </script>
+    <form name="form">
+        login;<input type="text" nam="login"><br><br>
+        haslo;<input type="password" namee="pass"><br><br>
+        <input type="button" value="Kliknij aby sie zalogowac" onClick="logowanie(this.form)">
+    </form>
+</body>
+</html>

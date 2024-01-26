@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Galeria</title>
+</head>
+<body>
+
+    <!-- Baner -->
+    <section class="banner">
+        <h1>Galeria obrazów</h1>
+    </section>
+
+    <!-- Lewy blok -->
+    <section class="left-block">
+        <img src="zdjecie.jpg" alt="Zdjęcie dnia">
+        <h3>Zdjęcia opublikowali</h3>
+        <table>
+            <!-- Zawartość tabeli zgodnie z Obrazem 3 -->
+            <tbody>
+                <tr>
+                    <td>Anna Porada</td>
+                    <td>10 zdjęć</td>
+                </tr>
+                <tr>
+                    <td>Krzysztof Wasilewski</td>
+                    <td>12 zdjęć</td>
+                </tr>
+                <tr>
+                    <td>Monika Kowalska</td>
+                    <td>4 zdjęcia</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Prawy blok -->
+    <section class="right-block">
+        <button id="prevBtn">prev</button>
+        <img id="activeImage" src="1.jpg" alt="Galeria">
+        <button id="nextBtn">next</button>
+        <hr>
+        <div id="thumbnails">
+            <!-- Miniatury zgodnie z opisem -->
+            <img src="1.jpg" alt="miniatura" onclick="changeActiveImage(1)">
+            <img src="2.jpg" alt="miniatura" onclick="changeActiveImage(2)">
+            <img src="3.jpg" alt="miniatura" onclick="changeActiveImage(3)">
+            <img src="4.jpg" alt="miniatura" onclick="changeActiveImage(4)">
+            <img src="5.jpg" alt="miniatura" onclick="changeActiveImage(5)">
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer>
+        <a href="https://pixabay.com" target="_blank">Więcej obrazów</a>
+        <p>Galerię wykonał: <span id="authorNumber">X</span></p>
+    </footer>
+
+    <!-- Skrypt do obsługi przycisków prev/next oraz miniatur -->
+    <script src="skrypt.js"></script>
+</body>
+</html>
