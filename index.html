@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(61, 61, 61); color: whitesmoke;">
+    <main>
+        Podaj numer kawy:<br>
+        <input type="number" name="typ" id="typ"><br>
+        Podaj wage w dekagramach:<br>
+        <input type="number" name="waga" id="waga"><br>
+        <button onclick="policz()">Zamów</button><br>
+        <span id="wynik"></span>
+        </main>
+
+<script>
+function policz() {
+    let typ = document.getElementById('typ').value;
+    const waga = document.getElementById('waga').value;
+    let wynik = 0;
+    const cena = [5,7,6];
+    if(typ<1 || typ>3) {
+        wynik = 0;
+        }
+        else{
+            typ=typ-1;
+            wynik = cena[typ]*waga;
+    }
+  
+    document.getElementById('wynik').innerHTML="Koszt zamówienia wynosi"+wynik+"zł";
+}
+</script>
+
+</body>
+</html>
